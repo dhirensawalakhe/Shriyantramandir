@@ -1,46 +1,22 @@
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { motion } from 'motion/react';
-import templeImage from 'figma:asset/985786fdb457bea890dd297e88d1ac928836e65d.png';
+
+// Import local images from src/images
+import t1 from '../images/t1.jpg';
+import t2 from '../images/t2.jpg';
+import t3 from '../images/t3.jpg';
+import t4 from '../images/t4.jpg';
+import t5 from '../images/t5.jpg';
+import t6 from '../images/t6.jpg';
 
 const Gallery = () => {
   const galleryImages = [
-    // Local image from import
-    {
-      src: 'src/images/t3.jpg',
-      alt: 'Sri Devi Temple Architecture',
-      title: 'Sacred Architecture',
-      isLocal: true
-    },
-    // Local images from public folder
-    {
-      src: 'src/images/t1.jpg',
-      alt: 'Prayer Ceremony',
-      title: 'Daily Prayers',
-      isLocal: true
-    },
-    // External hosted images
-    {
-      src: 'src/images/t2.jpg',
-      alt: 'Festival Celebrations',
-      title: 'Festival of Lights'
-    },
-    {
-      src: 'src/images/t4.jpg',
-      alt: 'Meditation Session',
-      title: 'Spiritual Practice'
-    },
-    {
-      src: 'src/images/t6.jpg',
-      alt: 'Community Gathering',
-      title: 'Devotee Fellowship'
-    },
-    {
-      src: 'src/images/t5.jpg',
-      alt: 'Temple Interior',
-      title: 'Divine Ambiance'
-    }
-    
-   
+    { src: t3, alt: 'Sri Devi Temple Architecture', title: 'Sacred Architecture' },
+    { src: t1, alt: 'Prayer Ceremony', title: 'Daily Prayers' },
+    { src: t2, alt: 'Festival Celebrations', title: 'Festival of Lights' },
+    { src: t4, alt: 'Meditation Session', title: 'Spiritual Practice' },
+    { src: t6, alt: 'Community Gathering', title: 'Devotee Fellowship' },
+    { src: t5, alt: 'Temple Interior', title: 'Divine Ambiance' }
   ];
 
   return (
@@ -87,23 +63,8 @@ const Gallery = () => {
               viewport={{ once: true }}
               whileHover={{ y: -10, transition: { duration: 0.3 } }}
             >
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.4 }}
-              >
-                {image.isLocal ? (
-                  <img
-                    src={image.src}
-                    alt={image.alt}
-                    className="w-full h-64 object-cover"
-                  />
-                ) : (
-                  <ImageWithFallback
-                    src={image.src}
-                    alt={image.alt}
-                    className="w-full h-64 object-cover"
-                  />
-                )}
+              <motion.div whileHover={{ scale: 1.05 }} transition={{ duration: 0.4 }}>
+                <img src={image.src} alt={image.alt} className="w-full h-64 object-cover" />
               </motion.div>
 
               <motion.div
@@ -141,9 +102,14 @@ const Gallery = () => {
           >
             Want to see more photos from our temple events and celebrations?
           </motion.p>
-          
+
           <motion.button
-            onClick={() => window.open("https://drive.google.com/drive/folders/1Bski9eidxHl6jRqWE-vXV91sQFHESAn7?usp=drive_link", "_blank")}
+            onClick={() =>
+              window.open(
+                'https://drive.google.com/drive/folders/1Bski9eidxHl6jRqWE-vXV91sQFHESAn7?usp=drive_link',
+                '_blank'
+              )
+            }
             className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 rounded-lg transition-all duration-200"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -151,7 +117,7 @@ const Gallery = () => {
             viewport={{ once: true }}
             whileHover={{
               scale: 1.05,
-              boxShadow: "0 10px 30px rgba(234, 88, 12, 0.3)",
+              boxShadow: '0 10px 30px rgba(234, 88, 12, 0.3)',
               transition: { duration: 0.2 },
             }}
             whileTap={{ scale: 0.95 }}
