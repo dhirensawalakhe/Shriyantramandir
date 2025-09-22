@@ -1,6 +1,5 @@
-import { ImageWithFallback } from './figma/ImageWithFallback';
 import { motion } from 'motion/react';
-import templeImage from 'figma:asset/985786fdb457bea890dd297e88d1ac928836e65d.png';
+import t1 from '../images/t1.jpg'; // import image from src
 
 const Hero = () => {
   return (
@@ -13,7 +12,7 @@ const Hero = () => {
         transition={{ duration: 1.5, ease: "easeOut" }}
       >
         <img
-          src='src/images/t1.jpg'
+          src={t1} // use imported variable
           alt="Sri Devi Temple Architecture"
           className="w-full h-full object-cover"
         />
@@ -32,8 +31,7 @@ const Hero = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.8 }}
       >
-        <motion.div 
-          className="text-lg sm:text-xl md:text-2xl mb-3 sm:mb-4 text-orange-300"
+        <motion.div className="text-lg sm:text-xl md:text-2xl mb-3 sm:mb-4 text-orange-300"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1 }}
@@ -56,15 +54,6 @@ const Hero = () => {
         >
           सर्व मंगल मांगल्ये शिवे सर्वार्थ साधिके
         </motion.div>
-        <motion.p 
-          className="text-sm sm:text-base md:text-lg text-white/90 max-w-2xl mx-auto leading-relaxed px-2"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.6 }}
-        >
-          {/* A place of worship, devotion, and spiritual growth. Join us in celebrating 
-          the divine presence and finding peace in our beautiful temple community. */}
-        </motion.p>
       </motion.div>
 
       {/* Scroll indicator */}
