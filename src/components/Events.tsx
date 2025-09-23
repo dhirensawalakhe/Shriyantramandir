@@ -93,7 +93,7 @@ const Events = () => {
           >
             Upcoming Events
           </motion.h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
             {upcomingEvents.map((event, index) => (
               <motion.div 
                 key={index} 
@@ -169,7 +169,7 @@ const Events = () => {
           >
             Annual Festivals We Celebrate
           </motion.h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6">
             {festivals.map((festival, index) => (
               <motion.div 
                 key={index} 

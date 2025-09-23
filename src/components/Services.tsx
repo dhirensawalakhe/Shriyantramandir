@@ -80,7 +80,7 @@ const Services = () => {
           </motion.p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16 lg:mb-20">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-16 lg:mb-20">
           {services.map((service, index) => (
             <motion.div 
               key={index} 
@@ -137,7 +137,7 @@ const Services = () => {
           >
             Daily Prayer Schedule
           </motion.h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
             {prayerSchedule.map((prayer, index) => (
               <motion.div 
                 key={index} 
